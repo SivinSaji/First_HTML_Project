@@ -6,13 +6,14 @@
   <title>Sivin Saji</title>
   <link rel="icon" href="https://instagram.fcok2-1.fna.fbcdn.net/v/t51.2885-19/s320x320/80333470_816175328852771_3536440775485161472_n.jpg?_nc_ht=instagram.fcok2-1.fna.fbcdn.net&_nc_ohc=c3PO840Jt7AAX-VI2My&oh=ccf4d195d4763393f6ae892f493b3daa&oe=5F9732B0" type="image/gif" sizes="16x16">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
  
 </head>
 <body>
   <header class="bg-info" style="position: fixed; width: 100%;z-index: 1;">
   <div  class="row text-white container-fluid">
    <div class="col-md-6  col-9 p-2 pl-5 width:20%">
-     <h2><strong>Sivin_Saji</strong></h2>
+     <h2><strong>Sivin Saji</strong></h2>
    </div>
    <div class="col-md-6 col-3">
      <nav class="navbar navbar-expand-lg navbar-light bg-info">
@@ -173,7 +174,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
-          <form  method="POST"  action="https://formspree.io/f/moqpeabl">
+          <form id="submit-form"  action="">
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputEmail4">Name</label>
@@ -214,7 +215,26 @@
     </div>
   </div>
 </footer>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script>
+  $("#submit-form").submit((e)=>{
+      e.preventDefault()
+      $.ajax({
+          url:"https://script.google.com/macros/s/AKfycbx67cqnLIp8Djacwd9V5lP6m5Bel-lWGZA-X5MpLGc0ShiTz3U/exec",
+          data:$("#submit-form").serialize(),
+          method:"post",
+          success:function (response){
+              alert("Form submitted successfully")
+              window.location.reload()
+              //window.location.href="https://google.com"
+          },
+          error:function (err){
+              alert("Something Error")
+
+          }
+      })
+  })
+</script>                                                                                                                      
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/f62af1375e.js" crossorigin="anonymous"></script>
