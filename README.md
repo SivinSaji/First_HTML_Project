@@ -1,3 +1,3 @@
 # personal_website
-projectt witout template 
+project without template 
 site available at: https://sivinsaji.github.io/personal_website/
